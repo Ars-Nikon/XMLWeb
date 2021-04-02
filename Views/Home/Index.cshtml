@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+@model IndexClass
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="m-1 p-1 ">
+    <h1 class="text-center"> XML DataBase</h1>
+
+
+
+    <div class="container">
+        <div class="row">
+            <table class="table ">
+                @foreach (Book book in Model.Books)
+                {
+                    <tr><td><a asp-action="Product" asp-route-Id="@book.Id">@book.Name</a></td><td><a asp-action="Edit" asp-route-Id="@book.Id" class="btn badge-info ">Edit</a></td></tr>
+                }
+            </table>
+            <a asp-controller="Home" class="btn btn-info" asp-action="Create">Create</a>
+        </div>
+    </div>
+    <div class="container">
+        <form asp-action="Search" method="get">
+            <label asp-for="ElementsViewModel.Element"></label>
+            <select asp-for="ElementsViewModel.Element" asp-items="Html.GetEnumSelectList<Elements>()"></select>
+            <input type="text" asp-for="text" />
+            <button class="btn btn-dark">Search</button>
+        </form>
+    </div>
+        <h1> LR 6 </h1>
+        <h2>19-КБ-ИБ3</h2>
+        <h2>Никонов А.А.</h2>
+        <h2>Трибунский А.В.</h2>
+        <h2>Агаджанян Э.Ю.</h2>
+        <h2>Хачатурян Л.Л.</h2>
+</body>
+</html>
+

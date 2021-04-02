@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+@model Book
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="m-1 p-1">
+
+    <form asp-controller="Home" asp-action="Create"  method="post">
+        
+        <fieldset class="form-group">
+            <label asp-for="Name">Name:  </label>
+            <input class="form-control" type="text" asp-for="Name" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="Authors.Author">Author:  </label>
+            <input class="form-control" asp-for="Authors.Author" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="ISBN">ISBM:  </label>
+            <input class="form-control" asp-for="ISBN" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="Price">Price:  </label>
+            <input class="form-control" asp-for="Price" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="Description">Description:  </label>
+            <input class="form-control" asp-for="Description" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="Image">Image:  </label>
+            <input class="form-control" asp-for="Image" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="Number_Page">Number_Page:  </label>
+            <input class="form-control" asp-for="Number_Page" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="Year">Year:  </label>
+            <input class="form-control" asp-for="Year" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="Publication">Publication:  </label>
+            <input class="form-control" asp-for="Publication" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label asp-for="Language">Language:  </label>
+            <input class="form-control" asp-for="Language" />
+        </fieldset>
+        <fieldset class="form-group">
+            <input type="submit" value="Save" class="btn btn-dark" />
+            <a asp-controller="Home" asp-action="Index" class="btn btn-danger">Back</a>
+        </fieldset>
+
+
+    </form>
+</body>
+</html>
+

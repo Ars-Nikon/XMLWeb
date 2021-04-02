@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+@model Book
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="m-1 p-1">
+    <div class="container">
+        <div class="row">
+            <table class="table ">
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Page</th>
+                    <th>Year</th>
+                    <th>Publication</th>
+                    <th>Language</th>
+                </tr>
+                <tr>
+                    <td>@Model.Name</td>
+                    <td>@Model.Authors.Author</td>
+                    <td>@Model.ISBN</td>
+                    <td>@Model.Price</td>
+                    <td>@Model.Description</td>
+                    <td>@Model.Number_Page</td>
+                    <td>@Model.Year</td>
+                    <td>@Model.Publication</td>
+                    <td>@Model.Language</td>
+                </tr>
+            </table>
+        </div>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-danger">Back</a>
+        <a asp-action="Edit" asp-route-Id="@Model.Id" class="btn badge-info ">Edit</a>
+    </div>
+
+</body>
+</html>

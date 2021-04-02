@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Book Id="0">
+    <Name>Война и мир</Name>
+    <Authors>
+      <Author>Лев Толстой</Author>
+    </Authors>
+    <ISBN>9780733426095</ISBN>
+    <Price>25</Price>
+    <Description>"Война и мир" - самый известный роман Л.Н.Толстого, как никакое другое произведение писателя, отражает глубину его мироощущения и философии.    </Description>
+    <Image>https://cdn.eksmo.ru/v2/ITD000000001087075/COVER/cover4__w820.jpg    </Image>
+    <Number_Page>1300</Number_Page>
+    <Year>1863</Year>
+    <Publication>Издательство "Эксмо" </Publication>
+    <Language>Russian</Language>
+  </Book>
+  <Book Id="1">
+    <Name>Мастер и Маргарита</Name>
+    <Authors>
+      <Author>Михаил Булгаков</Author>
+    </Authors>
+    <ISBN>9780733426064</ISBN>
+    <Price>439</Price>
+    <Description>"Мастер и Маргарита" - итоговое произведение выдающегося отечественного прозаика и драматурга Михаила Афанасьевича Булгакова.    </Description>
+    <Number_Page>470</Number_Page>
+    <Year>1940</Year>
+    <Publication>ЛитРес</Publication>
+    <Language>Russian</Language>
+  </Book>
+</ArrayOfBook>

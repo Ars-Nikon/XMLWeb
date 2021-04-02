@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+@model IEnumerable<Book>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="m-1 p-1 ">
+    <h1 class="text-center"> XML DataBase</h1>
+
+    <div class="container">
+        <div class="row">
+
+            @if (Model != null)
+            {
+                <table class="table ">
+                    @foreach (Book book in Model)
+                    {
+                        <tr><td><a asp-action="Product" asp-route-Id="@book.Id">@book.Name</a></td><td><a asp-action="Edit" asp-route-Id="@book.Id" class="btn badge-info ">Edit</a></td></tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <h1 class="text-center">NOT Found</h1>
+            }
+
+
+        </div>
+        <a asp-controller="Home" class="btn btn-info" asp-action="Index">Back</a>
+    </div>
+</body>
+</html>
