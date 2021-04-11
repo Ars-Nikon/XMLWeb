@@ -31,7 +31,7 @@ namespace XMLAdd.Controllers
 
         public IActionResult Search(ElementsViewModel elementsViewModel, string text)
         {
-            List<Book> books = null;
+            List<Book> books = new List<Book>();
             if (text == null)
             {
                 return View(books);
@@ -40,7 +40,9 @@ namespace XMLAdd.Controllers
             {
                 case ("Name"):
                     {
-                        books.AddRange(repositiryXML.Books().Where(x=>x.Name==text.Trim()));
+                      
+                            books.AddRange(repositiryXML.Books().Where(x=> x.Name == text));
+                        
                         break;
                     }
 
@@ -54,9 +56,9 @@ namespace XMLAdd.Controllers
                         int ISBM;
                         if (int.TryParse(text.Trim(), out ISBM))
                         {
-                            books.AddRange(repositiryXML.Books().Where(x => x.ISBN ==  ISBM));
+                            books.AddRange(repositiryXML.Books().Where(x => x.ISBN == ISBM));
                         }
-                       
+
                         break;
                     }
                 case ("Price"):

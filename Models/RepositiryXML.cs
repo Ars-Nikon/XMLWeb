@@ -63,7 +63,6 @@ namespace XMLAdd.Models
 
         public void Delete(Book book)
         {
-            
             Book bookRemove = books.First(x => x.Id == book.Id);
             books.Remove(bookRemove);
             Save();
